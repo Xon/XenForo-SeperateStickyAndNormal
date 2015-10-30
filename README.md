@@ -1,5 +1,4 @@
-Xenforo-SVSeperateStickyAndNormal
-======================
+#Xenforo-SeperateStickyAndNormal
 
 A XenForo +1.2 template modification to separate Sticky and Normal threads. Sticky/Normal labels are phrased.
 
