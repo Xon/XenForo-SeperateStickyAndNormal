@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<addon addon_id="SVSeperateStickyAndNormal" title="Separate Sticky and Normal Threads" version_string="1.0.0b" version_id="100000" url="https://xenforo.com/community/resources/separate-sticky-and-normal-threads-xf-1-2.3750/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+<addon addon_id="SVSeperateStickyAndNormal" title="Separate Sticky and Normal Threads" version_string="1.0.1" version_id="1000100" url="https://xenforo.com/community/resources/separate-sticky-and-normal-threads-xf-1-2.3750/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
   <admin_navigation/>
   <admin_permissions/>
   <admin_style_properties/>
@@ -27,14 +27,14 @@
     <modification template="thread_list" modification_key="SeparateStickyAndNormal_thread_list_normal" description="Normal Threads" execution_order="10" enabled="1" action="str_replace">
       <find><![CDATA[<xen:foreach loop="$threads" value="$thread">]]></find>
       <replace><![CDATA[<xen:if is="{$stickyThreads} AND {$threads}">
-<li class="sectionHeaders">&nbsp;&nbsp;{xen:phrase seperator_normal_threads}</li>
+<li class="sectionHeaders seperateThreads">&nbsp;&nbsp;{xen:phrase seperator_normal_threads}</li>
 </xen:if>
 $0]]></replace>
     </modification>
     <modification template="thread_list" modification_key="SeparateStickyAndNormal_thread_list_stickies" description="Stickie Threads" execution_order="10" enabled="1" action="str_replace">
       <find><![CDATA[<xen:foreach loop="$stickyThreads" value="$thread">]]></find>
       <replace><![CDATA[<xen:if is="{$stickyThreads} AND {$threads}">
-<li class="sectionHeaders">&nbsp;&nbsp;{xen:phrase seperator_sticky_threads}</li>
+<li class="sectionHeaders seperateThreads">&nbsp;&nbsp;{xen:phrase seperator_sticky_threads}</li>
 </xen:if>
 $0]]></replace>
     </modification>
